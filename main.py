@@ -5,7 +5,9 @@ import asyncio
 
 # Let's start working with PyTelegramBotAPI
 
-token = "TOKEN"
+with open ("token.txt", "r") as f:
+    token = f.read()
+    
 bot = AsyncTeleBot(token)
 
 latest_video_url=""
